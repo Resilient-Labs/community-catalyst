@@ -11,7 +11,6 @@ module.exports = {
       console.log(err);
     }
   },
-
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
@@ -21,7 +20,6 @@ module.exports = {
     }
 
   },
-
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
@@ -31,7 +29,6 @@ module.exports = {
       console.log(err);
     }
   },
-
   goingPost: async (req, res) => {
     try {
       await Post.findOneAndUpdate(
@@ -59,6 +56,7 @@ module.exports = {
         eventDate: req.body.eventDate,
         user: req.user.id,
         userName: req.user.userName,
+        eventLocation: req.body.eventLocation
       });
       console.log("Post has been added!");
       res.redirect("/profile");
