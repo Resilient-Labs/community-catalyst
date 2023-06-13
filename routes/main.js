@@ -14,8 +14,8 @@ router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
-router.get("/calender", ensureAuth, postsController.getCalender)
-router.get("/event", ensureAuth, postsController.getEvent)
+// router.get("/calender", ensureAuth, postsController.getCalender)
+// router.get("/event", ensureAuth, postsController.getEvent)
 
 
 
