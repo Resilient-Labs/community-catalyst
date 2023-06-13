@@ -26,6 +26,13 @@
     align-items: flex-start;
     margin: 3%;
     flex-wrap: wrap;
+    transition: all 0.3s ease;
+  }
+
+
+  .eventCard:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
   }
   
 
