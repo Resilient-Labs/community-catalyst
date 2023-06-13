@@ -45,8 +45,8 @@ body.overlay:before {
 
 html {
 	height: 100%;
-	background: #003567;
-	color: #ffffff;
+	background: #ffffff;
+	color: #f56969;
 	font-size: 13px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -106,7 +106,8 @@ header {
 	height: 80px;
 	width: 100%;
 	z-index: 50;
-	background: #003567;
+	/* margin-left: 158px; */
+	background: #dedede;
 }
 
 header>.wrapper {
@@ -117,13 +118,13 @@ header>.wrapper {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	color: #ffffff;
+	color: #f56969;
 	letter-spacing: 2px;
 	font-size: 13px;
 }
 
 header>.wrapper a {
-	color: #ffffff;
+	color: #f56969;
 	text-decoration: none;
 	margin-left: 10px;
 }
@@ -212,7 +213,7 @@ header>.wrapper a {
 	width: 30px;
 	height: 30px;
 	padding: 9px 12px;
-	background-color: #004b8f;
+	background-color: #f5f6f7;
 	cursor: pointer;
 	z-index: 10;
 	box-sizing: border-box;
@@ -244,7 +245,7 @@ header>.wrapper a {
 
 .c-month .prev:hover {
 	padding: 9px 10px;
-	background-color: #0055a4;
+	background-color: #d5d5d5;
 }
 
 .c-month .next {
@@ -253,7 +254,7 @@ header>.wrapper a {
 
 .c-month .next:hover {
 	padding: 9px 14px;
-	background-color: #0055a4;
+	background-color: #d5d5d5;
 }
 
 .c-paginator__year {
@@ -266,10 +267,10 @@ header>.wrapper a {
 	display: inline-block;
 	padding: 0 10px;
 	line-height: 30px;
-	color: white;
+	color: #f56969;
 	text-decoration: none;
 	height: 30px;
-	background-color: #004b8f;
+	background-color: #c4c4c4;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	border-radius: 15px;
@@ -293,7 +294,7 @@ header>.wrapper a {
 }
 
 .o-btn:hover {
-	background-color: #0055a4;
+	background-color: #d5d5d5;
 }
 
 .c-calendar {
@@ -304,7 +305,7 @@ header>.wrapper a {
 }
 
 .c-calendar__style {
-	background-color: #00407b;
+	background-color: #dedede;
 	margin: 20px;
 	padding: 10px;
 	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
@@ -394,7 +395,7 @@ header>.wrapper a {
 	line-height: 50px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	color: white;
+	color: #f56969;
 }
 
 .c-cal__cel {
@@ -405,7 +406,7 @@ header>.wrapper a {
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 }
-
+/* monday - friday */
 .c-cal__cel p {
 	position: absolute;
 	margin: 0;
@@ -414,12 +415,12 @@ header>.wrapper a {
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
-	background: #004585;
+	background: #d5d5d5;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
-	color: white;
+	color: #f56969;
 }
 
 .c-cal__cel::before {
@@ -431,25 +432,25 @@ header>.wrapper a {
 .c-cal__cel:nth-child(1) p {
 	background: rgba(215, 17, 15, 0.2);
 }
-
+/* saturday */
 .c-cal__cel:nth-child(7) p {
-	background: #003b71;
+	background: #d5d5d5;
 }
 
 .c-cal__cel:hover {
-	background-color: #004b8f !important;
+	background-color: #d5d5d5 !important;
 }
 
 .c-cal__cel:hover p {
-	background: #003b71 !important;
+	background: #c4c4c4 !important;
 }
-
+/* what is 447 and 451 for @Shawn */
 .c-cal__cel.isSelected {
-	background-color: #004b8f;
+	background-color: #c4c4c4;
 }
 
 .c-cal__cel.isSelected p {
-	background: #003b71;
+	background: #c4c4c4;
 }
 
 .c-cal__cel.isToday {
@@ -615,22 +616,24 @@ input {
 }
 
 #calBox {
-	margin-top: 10%;
+	margin-top: 2%;
 }
 
 #callHead {
-	width: 60%;
+	width: 75%;
+	border-radius: 10px;
 }
 
 #homeBtn {
 	margin-left: 20%;
-	color: #ffffff;
+	color: #f56969;
 	text-decoration: none;
 	padding: 0 10px;
 	line-height: 30px;
 	height: 30px;
-	background-color: #004b8f;
+	background-color: #c4c4c4;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	border: none;
+	border-radius: 15px;
 }
