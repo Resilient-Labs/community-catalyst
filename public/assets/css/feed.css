@@ -1,4 +1,4 @@
-.eventContainer{
+.feedContainer{
 
     display: flex;
     flex-direction: row;
@@ -11,7 +11,7 @@
 }
 
 
-.eventCard {
+.feedCard {
     background: rgba(228, 224, 224, 0.873);
     height: 200px;
     width: 400px;
@@ -30,7 +30,7 @@
   }
 
 
-  .eventCard:hover {
+  .feedCard:hover {
     transform: scale(1.1);
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
   }
@@ -52,7 +52,7 @@
     background-color: #f5d3d3;
   }
 
-  .eventSubcard{
+  .feedSubcard{
     display: flex;
   }
 
