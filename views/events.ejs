@@ -1,66 +1,68 @@
 <%- include('partials/head') -%>
 
-</head>
+	</head>
 
-<body class="is-preload">
+	<body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+		<!-- Wrapper -->
+		<div id="wrapper">
 
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
 
-				<!-- Header -->
-				<header id="header">
-					<a href="index.html" class="logo"><strong>Community Catalyst</strong> by Resilient Coders</a>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a>
-						</li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-					</ul>
-				</header>
-
-				<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header id="event-header">
-							<h1>Event Name<br />
-								by Event</h1>
-							<p>When: Jun. 7th 2pm - 8pm</p>
-							<p>Where: 101 West St. MA, 02301</p>
-						</header>
-					</div>
-					<span class="image object">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22497.390934998964!2d-122.4194156!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580863a048a8d%3A0x9a4f3f3e783fcdc!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1569178351334!5m2!1sen!2suk"
-							width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-					</span>
-				</section>
-
-				<!-- Section -->
-				<section>
-					<header class="major">
-						<h2 id="event-h2">About This Event</h2>
+					<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Community Catalyst</strong> by Resilient Coders</a>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+							</li>
+							<li><a href="#" class="icon brands fa-snapchat-ghost"><span
+										class="label">Snapchat</span></a>
+							</li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+							</li>
+							<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+						</ul>
 					</header>
-					<div class="posts event-post">
-						<article>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-							<h3 id="event-h3">Description</h3>
-							<p>
-								Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam
-								facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-							</p>
-						</article>
-					</div>
-				</section>
 
+					<!-- Banner -->
+					<section id="banner">
+						<div class="content">
+							<header id="event-header">
+								<h1><%- post.title -%><br />
+									<%- post.username -%></h1>
+								<p>When: <%- post.eventDate -%></p>
+								<p>Time: <%- post.time -%></p>
+							</header>
+						</div>
+						<span class="image object">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22497.390934998964!2d-122.4194156!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580863a048a8d%3A0x9a4f3f3e783fcdc!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1569178351334!5m2!1sen!2suk"
+								width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</span>
+					</section>
+
+					<!-- Section -->
+					<section>
+						<header class="major">
+							<h2 id="event-h2">About This Event</h2>
+						</header>
+						<div class="posts event-post">
+							<article>
+								<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+								<h3 id="event-h3">Description</h3>
+								<p>
+									<%- post.caption -%>
+								</p>
+							</article>
+						</div>
+					</section>
+
+				</div>
 			</div>
-		</div>
 
-		<%- include('partials/sidebar') -%>
+			<%- include('partials/sidebar') -%>
 
-			<%- include('partials/scripts') -%>
+				<%- include('partials/scripts') -%>
