@@ -80,23 +80,34 @@
             <header class="major">
               <h2>Form & Calendar</h2>
             </header>
-            <div class="posts">
-              <form action="">
-                <label for="">Event Name</label>
-                <input type="text">
-                <label for="">Location</label>
-                <input type="text">
-                <label for="">Date</label>
-                <input type="date">
-                <label for="">Start Time</label>
-                <input type="time">
-                <label for="">End Time</label>
-                <input type="time">
-                <label for="">Event Capacity</label>
-                <input type="text">
-                <ul class="actions">
-                  <li><a href="#" class="button">Add to Calendar</a></li>
-                </ul>
+            <div class="mt-5">  
+              <h2>Add a post</h2>
+              <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <div class="mb-3">
+                  <label for="caption" class="form-label">Event Details</label>
+                  <textarea class="form-control" id="caption" name="caption"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="imgUpload" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="imageUpload" name="file">
+                </div>
+                <div class="mb-3">
+                  <label for="eventDate" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="eventDate" name="eventDate">
+                </div>
+                <div class="mb-3">
+                  <label for="time" class="form-label">Time</label>
+                  <input type="time" class="form-control" id="time" name="time">
+                </div>
+                <div class="mb-3">
+                  <label for="eventLocation" class="form-label">Location</label>
+                  <input type="text" class="form-control" id="eventLocation" name="eventLocation">
+                </div>
+                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
               </form>
             </div>
           </section>
