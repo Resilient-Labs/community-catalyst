@@ -15,6 +15,7 @@
               <li>
                 <a
                   href="https://twitter.com/resilientcoders"
+                  target="_blank"
                   class="icon brands fa-twitter"
                   ><span class="label">Twitter</span></a
                 >
@@ -22,6 +23,7 @@
               <li>
                 <a
                   href="https://www.facebook.com/resilientcoders/"
+                  target="_blank"
                   class="icon brands fa-facebook-f"
                   ><span class="label">Facebook</span></a
                 >
@@ -30,6 +32,7 @@
               <li>
                 <a
                   href="https://www.instagram.com/resilientcoders/?hl=en"
+                  target="_blank"
                   class="icon brands fa-instagram"
                   ><span class="label">Instagram</span></a
                 >
@@ -39,73 +42,42 @@
 
           <!-- Content -->
           <section>
-            <header class="main">
-              <h1>Feed</h1>
-            </header>
+    <header class="main">
+      <h1>Feed</h1>
+    </header>
 
-            <span class="image main"><img src="images/CC.jpg" alt="" /></span>
-            <!-- Add cards , AH DG-->
-            <div class="eventContainer">
-              <div class="eventCard">
-                <h3 class="eventTitle">Community Event Testing</h3>
-                <h4 class="eventLocation">
-                  <i class="fas fa-map-marker-alt"></i> Boston, MA
-                </h4>
-                <p class="eventTime">
-                  <i class="far fa-calendar-alt"></i> August 1, 2023
-                </p>
-				<a href ="#">Link to Event</a>
-				
-				<button class="btnGoing"> I am Going </button>
-				
-              </div>
+    <span class="image main"><img src="images/CC.jpg" alt="" /></span>
+    <!-- Add cards , AH DG-->
+    <div class="feedContainer">
+      <% if(posts.length === 0 ) { %>
+        <h3> No Events available at the moment. <a href="/profile">Create one </h3></a>
+        <% } else { %>
+      <% for(var i=0; i<posts.length; i++) {%>
+      <div class="feedCard">
+        <h3 class="feedTitle"><%= posts[i].title%></h3>
+        <p class="feedCaption"> <%= posts[i].caption%></p>
+        <a href="/post/<%= posts[i]._id%>"><a href="#">Link to Event</a>
+        <h4 class="feedLocation">
+          <i class="fas fa-map-marker-alt"></i> <%= posts[i].location%>
+        </h4>
+        <p class="feedTime">
+          <i class="far fa-calendar-alt"></i> <%= posts[i].eventDate%>
+        </p>
+        <form
+          class="col-1"
+          action="/post/goingPost/<%= posts.id %>?_method=PUT"
+          method="POST"
+        >
+          <button class="btn btn-primary fa fa-heart btnGoing" type="submit">I am Going</button>
+        </form>
 
-			  <div class="eventCard">
-                <h3 class="eventTitle">Community Event Testing</h3>
-                <h4 class="eventLocation">
-                  <i class="fas fa-map-marker-alt"></i> Boston, MA
-                </h4>
-                <p class="eventTime">
-                  <i class="far fa-calendar-alt"></i> August 1, 2023
-                </p>
-				<a href ="#">Link to Event</a>
-				
-				<button class="btnGoing"> I am Going </button>
-				
-              </div>
+ 
+      </div>
+       <% } %>
+      <% } %>
 
-
-			  <div class="eventCard">
-                <h3 class="eventTitle">Community Event Testing</h3>
-                <h4 class="eventLocation">
-                  <i class="fas fa-map-marker-alt"></i> Boston, MA
-                </h4>
-                <p class="eventTime">
-                  <i class="far fa-calendar-alt"></i> August 1, 2023
-                </p>
-				<a href ="#">Link to Event</a>
-				
-				<button class="btnGoing"> I am Going </button>
-				
-              </div>
-
-
-			  <div class="eventCard">
-                <h3 class="eventTitle">Community Event Testing</h3>
-                <h4 class="eventLocation">
-                  <i class="fas fa-map-marker-alt"></i> Boston, MA
-                </h4>
-                <p class="eventTime">
-                  <i class="far fa-calendar-alt"></i> August 1, 2023
-                </p>
-				<a href ="#">Link to Event</a>
-				
-				<button class="btnGoing"> Going </button>
-				
-              </div>
-
-            </div>
-          </section>
+    </div>
+  </section>
         </div>
       </div>
 
