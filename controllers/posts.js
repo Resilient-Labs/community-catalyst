@@ -6,7 +6,7 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
-      res.render("profile.ejs", { posts: posts, user: req.user, });
+          res.render("events.ejs", { post: post, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -23,8 +23,7 @@ module.exports = {
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      ({ createdAt: "desc" }).lean();
-      res.render("post.ejs", { post: post, user: req.user });
+      res.render("events.ejs", { post: post, user: req.user });
     } catch (err) {
       console.log(err);
     }
