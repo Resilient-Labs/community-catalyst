@@ -20,18 +20,11 @@
           <section id="banner">
             <div class="content">
               <header>
-                <h1>Hi, <%- user.userName -%><br />
-                </h1>
-                <p>About Me</p>
-              </header>
-              <p><%- user.userName -%></p>
+                <h1>Hi, <%- user.userName -%></h1>
               <!-- <ul class="actions">
 											<li><a href="#" class="button big">Learn More</a></li>
 										</ul> -->
             </div>
-            <span class="image object">
-              <img src="images/pic10.jpg" alt="" />
-            </span>
           </section>
 
 
@@ -45,33 +38,32 @@
               <form action="/post/createPost" enctype="multipart/form-data" method="POST">
                 <div class="mb-3">
                     <label for="title" class="form-label"> Event Name</label>
-                    <input type="text" class="form-control" id="title" name="title">
+                    <input type="text" class="form-control" id="title" name="title" required placeholder="Event Name">
                 </div>
                 <div class="mb-3">
                   <label for="caption" class="form-label">Event Details</label>
-                  <textarea class="form-control" id="caption" name="caption"></textarea>
+                  <textarea class="form-control" id="caption" name="caption" maxlength="200" required placeholder="Event Details (200 characters max)"></textarea>
                 </div>
                 <div class="mb-3">
-                  <label for="imgUpload" class="form-label">Image</label>
-                  <input type="file" class="form-control" id="imageUpload" name="file">
+                  <label for="eventLocation" class="form-label">Event Location</label>
+                  <input type="text" class="form-control" id="eventLocation" name="eventLocation" required placeholder="Event Location">
                 </div>
                 <div class="mb-3">
                   <label for="eventDate" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="eventDate" name="eventDate">
+                  <input type="date" class="form-control" id="eventDate" name="eventDate" required>
                 </div>
                 <div class="mb-3">
                   <label for="time" class="form-label">Time</label>
-                  <input type="time" class="form-control" id="time" name="time">
+                  <input type="time" class="form-control" id="time" name="time" required>
                 </div>
                 <div class="mb-3">
-                  <label for="eventLocation" class="form-label">Location</label>
-                  <input type="text" class="form-control" id="eventLocation" name="eventLocation">
+                  <label for="imgUpload" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="imageUpload" name="file" required>
                 </div>
                 <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
               </form>
             </div>
           </section>
-
         </div>
       </div>
 
