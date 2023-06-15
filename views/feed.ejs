@@ -61,11 +61,11 @@
                         </p>
                         <p><i class="far fa-calendar-alt"></i> <%= event.eventDate %>
                         </p>
-                        <p> <%= event.going %>
+                        <p>Attending: <%= event.going %>
                         </p>
                       </section>
                         <form class="col-1" action="/post/goingPost/<%= event.eventId %>?_method=PUT" method="POST">
-                          <button class="btn btn-primary fa fa-heart btnGoing" type="submit">I am Going</button>
+                          <button class="btn btn-primary fa fa-heart btnGoing" type="submit"> I am Going</button>
                         </form>
                       </div>
                       <% }) %>
@@ -83,7 +83,7 @@
                               </p>
                               <p><i class="far fa-calendar-alt"></i> <%= event.eventDate %>
                               </p>
-                              <p><%= event.going %>
+                              <p>Attended: <%= event.going %>
                               </p>
                             </section>
                             <p>This event took place <%= event.daysPassed %> day(s) ago.</p>
