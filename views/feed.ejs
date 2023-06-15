@@ -44,7 +44,7 @@
                   <% let pastEvents=[]; let upcomingEvents=[]; for (let i=0; i < posts.length; i++) { let
                     currentDate=new Date(); let eventDate=new Date(posts[i].eventDate); let
                     daysPassed=Math.floor((currentDate - eventDate) / (1000 * 60 * 60 * 24)); let eventObj={ title:
-                    posts[i].title, caption: posts[i].caption, eventId: posts[i]._id, location: posts[i].location,
+                    posts[i].title, caption: posts[i].caption, eventId: posts[i]._id, location: posts[i].eventLocation,
                     eventDate: posts[i].eventDate, daysPassed: daysPassed }; if (eventDate < currentDate) {
                     pastEvents.push(eventObj); } else { upcomingEvents.push(eventObj); } } %>
                     <% upcomingEvents.forEach(function(event) { %>
