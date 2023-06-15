@@ -21,13 +21,31 @@ html,
 body {
   padding: 0;
   margin: 0;
-  margin-top: 63px;
+  
   color: #ffffff;
 }
 body {
   font-family: "Source Sans Pro";
  
 }
+header{
+  width: 100%;
+  height: 60px;
+}
+header ul{
+  margin: 0px 15px;
+  padding: 10px;
+  border-bottom: 3px solid #f56969;
+}
+header li{
+  display: inline-block;
+  padding: 0px 10px;
+}
+nav > ul > li > a{
+  color: #f56969;
+  font-weight: bold;
+}
+
 input:focus,
 textarea:focus,
 button:focus {
@@ -500,19 +518,27 @@ button.icon-button > span.chevron-arrow-right {
     display: block;
 }
 #addEventBtn{
-    margin: 10px 7px;
-    color: #f56969;
-    font-weight: bolder;
-    border: 2px solid #ff8282;
-    border-radius: 4px;
-    width: 7%;
+  margin: 10px 7px;
+  color: #f56969;
+  font-weight: bolder;
+  border: 2px solid #ff8282;
+  border-radius: 4px;
+  width: 7%;
 }
 .backTo{
-    color: #f56969;
-    font-weight: bolder;
-    border: 2px solid #ff8282;
-    border-radius: 4px;
-    width: 7%;
+  margin: 10px 7px;
+  color: #f56969;
+  font-weight: bolder;
+  border: 2px solid #ff8282;
+  border-radius: 4px;
+  
+}
+.deleteBtn{
+  margin: 10px 7px;
+  color: #f56969;
+  border: 2px solid #ff8282;
+  border-radius: 4px;
+  width: 30%;
 }
 @media screen and (max-width: 1280px) {
   .calendar-inner {
