@@ -1,61 +1,59 @@
-.eventContainer{
-
-    display: flex;
-    flex-direction: row;
-    margin: 11px 10px 11px 12px;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: flex-end;
-    justify-content: space-evenly
-
+*{
+  box-sizing: border-box;
 }
-
-
-.eventCard {
-    background: rgba(228, 224, 224, 0.873);
-    height: 200px;
-    width: 400px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    color: darkslategrey;
-    font-family: Arial, sans-serif;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 3%;
-    flex-wrap: wrap;
-    transition: all 0.3s ease;
+.feedContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+}
+.feedCard {
+  background-color: #F4F4F4;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  transition: all 0.3s ease;
+  width: 70%;
+}
+.feedCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.feedCard h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.feedCard p {
+  margin: 5px 0;
+}
+.feedCard a {
+  text-decoration: none;
+  color: #F06B6B;
+}
+.feedCard .fa-map-marker-alt,
+.feedCard .fa-calendar-alt {
+  margin-right: 5px;
+}
+.feedCard form {
+  margin-top: 10px;
+}
+.btnGoing {
+  background-color: #F4F4F4;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btnGoing:hover {
+  background-color: #F2C5C5;
+}
+@media (max-width: 800px) {
+  .feedCard {
+    width: 100%;
   }
-
-
-  .eventCard:hover {
-    transform: scale(1.1);
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
-  }
-  
-
-  .btnGoing {
-    padding: 5px 5px;
-    font-size: 10px;
-    border-radius: 5px;
-    background-color: #ffffff30;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-  }
-  
-  .btnGoing:hover {
-    background-color: #f5d3d3;
-  }
-
-  .eventSubcard{
-    display: flex;
-  }
-
-
-
-  
+}
