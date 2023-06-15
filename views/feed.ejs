@@ -49,6 +49,9 @@
                     pastEvents.push(eventObj); } else { upcomingEvents.push(eventObj); } } %>
                     <% upcomingEvents.forEach(function(event) { %>
                       <div class="feedCard">
+                        <form class="col-1" action="/post/goingPost/<%= event.eventId %>?_method=PUT" method="POST">
+                          <button class="btn btn-primary fa fa-heart btnGoing" type="submit">I am Going</button>
+                        </form>
                         <h3>
                           <%= event.title %>
                         </h3>
@@ -57,14 +60,12 @@
                           <p>
                             <%= event.caption %>
                           </p>
-                        <p><i class="fas fa-map-marker-alt"></i> Location <%= event.location %>
+                        <p><i class="fas fa-map-marker-alt"></i> Location: <%= event.location %>
                         </p>
                         <p><i class="far fa-calendar-alt"></i> <%= event.eventDate %>
                         </p>
                       </section>
-                        <form class="col-1" action="/post/goingPost/<%= event.eventId %>?_method=PUT" method="POST">
-                          <button class="btn btn-primary fa fa-heart btnGoing" type="submit">I am Going</button>
-                        </form>
+                        
                       </div>
                       <% }) %>
                         <% pastEvents.forEach(function(event) { %>
@@ -77,7 +78,7 @@
                               <p>
                               <%= event.caption %>
                               </p>
-                              <p><i class="fas fa-map-marker-alt"></i> Location <%= event.location %>
+                              <p><i class="fas fa-map-marker-alt"></i> Location: <%= event.location %>
                               </p>
                               <p><i class="far fa-calendar-alt"></i> <%= event.eventDate %>
                               </p>
