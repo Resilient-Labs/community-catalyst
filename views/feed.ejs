@@ -44,11 +44,11 @@
                   <% let pastEvents=[]; let upcomingEvents=[]; for (let i=0; i < posts.length; i++) { let
                     currentDate=new Date(); let eventDate=new Date(posts[i].eventDate); let
                     daysPassed=Math.floor((currentDate - eventDate) / (1000 * 60 * 60 * 24)); let eventObj={ title:
-                    posts[i].title, caption: posts[i].caption, eventId: posts[i]._id, location: posts[i].eventLocation,
+                    posts[i].title, caption: posts[i].caption, eventId: posts[i]._id, location: posts[i].eventLocation, going: posts[i].going,
                     eventDate: posts[i].eventDate, daysPassed: daysPassed }; if (eventDate < currentDate) {
                     pastEvents.push(eventObj); } else { upcomingEvents.push(eventObj); } } %>
                     <% upcomingEvents.forEach(function(event) { %>
-                      <div class="feedCard">
+                      <div class="feedCard" id="<%= event.eventId %>">
                         <h3>
                           <%= event.title %>
                         </h3>
@@ -60,6 +60,8 @@
                         <p><i class="fas fa-map-marker-alt"></i> Location <%= event.location %>
                         </p>
                         <p><i class="far fa-calendar-alt"></i> <%= event.eventDate %>
+                        </p>
+                        <p> <%= event.going %>
                         </p>
                       </section>
                         <form class="col-1" action="/post/goingPost/<%= event.eventId %>?_method=PUT" method="POST">
@@ -80,6 +82,8 @@
                               <p><i class="fas fa-map-marker-alt"></i> Location <%= event.location %>
                               </p>
                               <p><i class="far fa-calendar-alt"></i> <%= event.eventDate %>
+                              </p>
+                              <p><%= event.going %>
                               </p>
                             </section>
                             <p>This event took place <%= event.daysPassed %> day(s) ago.</p>

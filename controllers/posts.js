@@ -37,7 +37,7 @@ module.exports = {
         }
       );
       console.log("Going +1");
-      res.redirect(`/post/${req.params.id}`);
+      res.redirect(`/feed#${req.params.id}`);
     } catch (err) {
       console.log(err);
     }
