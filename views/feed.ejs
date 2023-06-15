@@ -63,7 +63,7 @@
                         </p>
                       </section>
                         <form class="col-1" action="/post/goingPost/<%= event.eventId %>?_method=PUT" method="POST">
-                          <button class="btn btn-primary fa fa-heart btnGoing" type="submit">I am Going</button>
+                          <button class="btn btn-primary fa fa-heart btnGoing" type="submit">I am Going <%= posts.going  %></button>
                         </form>
                       </div>
                       <% }) %>

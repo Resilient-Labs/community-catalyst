@@ -30,14 +30,16 @@ module.exports = {
   },
   goingPost: async (req, res) => {
     try {
-      await Post.findOneAndUpdate(
-        { _id: req.params.id },
-        {
-          $inc: { going: 1 },
-        }
-      );
-      console.log("Going +1");
-      res.redirect(`/post/${req.params.id}`);
+      
+      const thisPost = await Post.findById(req.params.id)
+      thisPost.going += 1
+      thisPost.save()
+      console.log("Likes +1");
+      if(req.body.page == 'feed'){
+        res.redirect('/feed')
+      } else {
+        res.redirect(`/post/${req.params.id}`);
+      }
     } catch (err) {
       console.log(err);
     }
@@ -51,6 +53,7 @@ module.exports = {
         image: result.secure_url,
         cloudinaryId: result.public_id,
         caption: req.body.caption,
+        going: req.body.going,
         time: req.body.time,
         eventDate: req.body.eventDate,
         user: req.user.id,
