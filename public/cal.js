@@ -8,7 +8,7 @@ document.querySelector('#addEventBtn').addEventListener('click', () => {
 })
   .then(response => response.json())
   .then(data => {
-    addCalendarEvent(document.getElementById('addEventID').value,
+    addCalendarEvent(document.getElementById('addEventID').value = '',
     $("#evoCalendar").evoCalendar('getActiveDate'), data._id)
     console.log('Response:', data);
   })
