@@ -50,9 +50,13 @@
   border-radius: 3px;
   cursor: pointer;
 }
+
 .btnGoing:hover {
   background-color: #F2C5C5;
 }
+
+
+
 @media (max-width: 800px) {
   .feedCard {
     width: 100%;
