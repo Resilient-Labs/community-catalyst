@@ -27,7 +27,7 @@
 				<!-- Banner -->
 					<!-- Banner -->
 					<section id="banner">
-						<div class="content">
+						<div class="content event-content">
 							<header id="event-header">
 								<h1><%- post.title -%><br />
 									<%- post.username -%></h1>
@@ -50,8 +50,7 @@
 					</header>
 					<div class="posts event-post">
 						<article>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-							<h3 id="event-h3">Description</h3>
+							<img src="<%- post.image %>">
 							<p>
 								<%- post.caption -%>
 							</p>

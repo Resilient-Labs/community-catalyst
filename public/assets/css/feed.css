@@ -15,6 +15,7 @@
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
+  margin-bottom: 50px;
   width: 300px;
   transition: all 0.3s ease;
   width: 70%;
@@ -56,4 +57,8 @@
   .feedCard {
     width: 100%;
   }
+}
+
+#feed-cards {
+  text-align: center;
 }
