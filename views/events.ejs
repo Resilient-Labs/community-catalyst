@@ -57,7 +57,11 @@
 						</article>
 					</div>
 				</section>
-
+				<%if(post.user==user.id){ %>
+					<form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3">
+						<button class="btn btn-primary fa fa-trash">Delete Post</button>
+					</form>
+					<%}%>
 			</div>
 		</div>
 
