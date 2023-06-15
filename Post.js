@@ -21,7 +21,7 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  evntLocation: {
+  eventLocation: {
     type: String,
     required: true,
   },
