@@ -58,7 +58,7 @@ module.exports = {
         eventLocation: req.body.eventLocation
       });
       console.log("Post has been added!");
-      res.redirect("/profile");
+      res.redirect("/feed#jumpToFeed"); 
     } catch (err) {
       console.log(err);
     }
