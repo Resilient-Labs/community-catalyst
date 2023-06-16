@@ -22,23 +22,17 @@
         </nav>
 
         <!-- Section -->
-        <section>
+        <section class="top-events">
             <header class="major">
                 <h2>Top Events</h2>
             </header>
             <div class="mini-posts">
-                <article>
-                    <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                </article>
-                <article>
-                    <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                </article>
-                <article>
-                    <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                </article>
+                <% posts.slice(0, 3).forEach((post) => { %>
+                    <article>
+                        <img src="<%- post.image %>" style="width: 100%;">
+                        <p><%= post.title %> - Attending: <%= post.going %></p>
+                    </article>
+                <% }); %>
             </div>
         </section>
 
@@ -51,7 +45,7 @@
                 empowerment for the black and brown community. Seamlessly connect, organize, 
                 and drive impactful change like never before. Discover a vibrant hub of activism and 
                 unwavering support, fostering connections with like-minded individuals and 
-                organizations. Engage in powerful conversations, share vital information, 
+                organizations. <br><br>Engage in powerful conversations, share vital information, 
                 and effortlessly coordinate transformative events. Unlock access to invaluable 
                 resources and funding opportunities, igniting your mission and amplifying your 
                 voice to create lasting impact.</p>
